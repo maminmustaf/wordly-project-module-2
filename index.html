@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wordly | Dictionary SPA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container">
+
+            <h1 class="logo">Wordly</h1>
+
+            <p class="tagline">
+                Search any English word and discover its meanings,
+                pronunciation, examples, synonyms, antonyms and more.
+            </p>
+
+            <button
+                id="themeBtn"
+                class="theme-btn"
+                type="button"
+                aria-label="Toggle Theme">
+                Theme
+            </button>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <section class="search-section">
+
+            <form id="searchForm">
+
+                <label for="wordInput">
+                    Search a Word
+                </label>
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="wordInput"
+                        placeholder="Enter an English word..."
+                        autocomplete="off">
+
+                    <button
+                        id="searchBtn"
+                        type="submit">
+                        Search
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <div class="close-wrapper">
+
+            <button
+                id="closeBtn"
+                class="close-btn"
+                type="button">
+                Close Search
+            </button>
+
+        </div>
+
+        <section class="status-section">
+
+            <p
+                id="loading"
+                class="loading hidden">
+                Loading...
+            </p>
+
+            <p
+                id="error"
+                class="error hidden"
+                role="alert">
+            </p>
+
+        </section>
+
+        <section class="results-section">
+
+            <div
+                id="wordCard"
+                class="word-card">
+
+                <div class="word-header">
+
+                    <div class="word-info">
+
+                        <h2 id="wordTitle">
+                            Search a word...
+                        </h2>
+
+                        <p id="phonetic">
+                            Pronunciation will appear here.
+                        </p>
+
+                    </div>
+
+                    <div class="actions">
+
+                        <button
+                            id="audioBtn"
+                            class="icon-btn"
+                            type="button"
+                            aria-label="Play Pronunciation">
+                            audio
+                        </button>
+
+                        <button
+                            id="favoriteBtn"
+                            class="icon-btn"
+                            type="button"
+                            aria-label="Favorite Word">
+                            save 
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div id="meaningsContainer">
+
+                    <div class="meaning">
+
+                        <h3 class="partOfSpeech">
+                            Part of Speech
+                        </h3>
+
+                        <div class="definitions">
+
+                            <p>
+                                Definitions will appear here after searching.
+                            </p>
+
+                        </div>
+
+                        <div class="examples">
+
+                            <h4>Examples</h4>
+
+                            <ul class="exampleList">
+
+                                <li>No examples available.</li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="synonyms">
+
+                            <h4>Synonyms</h4>
+
+                            <p class="synonymText">
+                                No synonyms available.
+                            </p>
+
+                        </div>
+
+                        <div class="antonyms">
+
+                            <h4>Antonyms</h4>
+
+                            <p class="antonymText">
+                                No antonyms available.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="source">
+
+                    <h3>Source</h3>
+
+                    <a
+                        id="sourceLink"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Source link will appear here.
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="favorites-section">
+
+            <h2>Favorite Words</h2>
+
+            <p id="favoritesEmpty">
+
+                No favorite words saved yet.
+
+            </p>
+
+            <div id="favoritesContainer">
+
+            </div>
+
+        </section>
+
+    </main>
+    <script src ="script.js"></script>
+
+</body>
+
+</html>
